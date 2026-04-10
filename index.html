@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Life Financial | Life Insurance & Retirement Planning</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0a0a0a;
+color:white;
+}
+
+/* NAV */
+
+nav{
+position:sticky;
+top:0;
+background:#000;
+padding:15px;
+display:flex;
+justify-content:space-between;
+border-bottom:1px solid #222;
+z-index:999;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+}
+
+nav a:hover{
+color:#ff0000;
+}
+
+/* EKG BAR */
+
+.ekg-bar{
+width:100%;
+height:80px;
+background:#000;
+}
+
+.ekg-bar path{
+stroke:#ff0000;
+stroke-width:3;
+fill:none;
+stroke-dasharray:1000;
+stroke-dashoffset:1000;
+animation:ekgMove 4s linear infinite;
+}
+
+@keyframes ekgMove{
+0%{stroke-dashoffset:1000;}
+100%{stroke-dashoffset:0;}
+}
+
+/* HERO */
+
+header{
+text-align:center;
+padding:80px 20px;
+position:relative;
+overflow:hidden;
+}
+
+header::before{
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle, rgba(255,0,0,0.35), transparent 70%);
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+animation:pulse 2.5s infinite;
+z-index:0;
+}
+
+@keyframes pulse{
+0%{transform:translate(-50%,-50%) scale(1);}
+50%{transform:translate(-50%,-50%) scale(1.3);}
+100%{transform:translate(-50%,-50%) scale(1);}
+}
+
+.logo{
+max-width:420px;
+position:relative;
+z-index:2;
+}
+
+.slogan{
+font-size:22px;
+margin-top:20px;
+font-style:italic;
+color:#ff4d4d;
+}
+
+.hero-sub{
+margin-top:15px;
+font-size:18px;
+}
+
+/* SECTIONS */
+
+section{
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
+}
+
+h2{
+text-align:center;
+margin-bottom:50px;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:#1a1a1a;
+padding:25px;
+border-radius:10px;
+border:1px solid #333;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#ff0000;
+}
+
+/* CARRIERS */
+
+.carriers{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+}
+
+.carriers img{
+height:55px;
+background:white;
+padding:12px;
+border-radius:10px;
+filter:grayscale(100%);
+transition:.3s;
+}
+
+.carriers img:hover{
+filter:none;
+transform:scale(1.05);
+}
+
+/* TESTIMONIALS */
+
+.testimonial-box{
+max-width:800px;
+margin:auto;
+background:#1a1a1a;
+padding:30px;
+border-radius:10px;
+text-align:center;
+font-size:18px;
+border:1px solid #333;
+}
+
+.client{
+margin-top:15px;
+color:#ff4d4d;
+font-weight:bold;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.profile{
+max-width:400px;
+border-radius:10px;
+}
+
+/* FORM */
+
+form{
+max-width:600px;
+margin:auto;
+background:#1c1c1c;
+padding:30px;
+border-radius:10px;
+}
+
+input,select,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:6px;
+}
+
+button{
+background:#ff0000;
+color:white;
+padding:15px;
+border:none;
+width:100%;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+background:#000;
+}
+
+@media(max-width:900px){
+.about{
+grid-template-columns:1fr;
+text-align:center;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- EKG -->
+
+<svg class="ekg-bar" viewBox="0 0 800 100">
+<path d="M0 50 L80 50 L120 50 L150 10 L190 90 L230 50 L800 50"/>
+</svg>
+
+<!-- NAV -->
+
+<nav>
+<div><strong>Happy Life Financial</strong></div>
+<div>
+<a href="#services">Services</a>
+<a href="#carriers">Carriers</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+
+<header>
+
+<img src="logo.png" class="logo">
+
+<div class="slogan">
+"Where we make happiness your Lifestyle, and your Legacy."
+</div>
+
+<div class="hero-sub">
+Protecting Families • Building Wealth • Securing Futures  
+<br>
+TJusticeWealth@gmail.com
+</div>
+
+</header>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2>Insurance & Financial Solutions (No Medical Exams Required)</h2>
+
+<div class="services">
+
+<div class="card"><h3>Term Life Insurance</h3><p>Affordable protection for a set period of time designed to protect your family's income.</p></div>
+
+<div class="card"><h3>Whole Life Insurance</h3><p>Permanent coverage that builds guaranteed cash value while providing lifelong protection.</p></div>
+
+<div class="card"><h3>Indexed Universal Life (IUL)</h3><p>Flexible protection with tax-advantaged growth tied to market indexes.</p></div>
+
+<div class="card"><h3>Mortgage Protection</h3><p>Protects your home by covering your mortgage balance if something happens.</p></div>
+
+<div class="card"><h3>Annuities</h3><p>Provides guaranteed income in retirement and protects your savings.</p></div>
+
+<div class="card"><h3>Final Expense</h3><p>Coverage designed to handle funeral and burial costs.</p></div>
+
+<div class="card"><h3>Guaranteed Issue</h3><p>No medical exam required coverage for those who may have health concerns.</p></div>
+
+</div>
+
+</section>
+
+<!-- CARRIERS -->
+
+<section id="carriers">
+
+<h2>Partnered With Top-Rated Insurance Carriers Nationwide</h2>
+
+<div class="carriers">
+<img src="athene.png">
+<img src="transamerica.png">
+<img src="americo.png">
+<img src="mutual.png">
+<img src="corebridge.png">
+</div>
+
+<p style="text-align:center;margin-top:20px;">...and more</p>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section>
+
+<h2>What Our Clients Say</h2>
+
+<div class="testimonial-box">
+<div id="testimonial">
+"Tristian made the entire process simple and stress-free. I finally feel protected knowing my family is covered."
+<div class="client">— Sarah M.</div>
+</div>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="about">
+
+<img src="profile.png" class="profile">
+
+<div>
+
+<h2>About Tristian Justice</h2>
+
+<p>Tristian Justice is the founder of <strong>Happy Life Financial</strong>, serving clients nationwide since 2012.</p>
+
+<p>He specializes in life insurance, mortgage protection, and retirement strategies designed to protect families and build long-term wealth.</p>
+
+<p>His mission is to educate, empower, and provide customized financial protection solutions for every client.</p>
+
+<p><strong>NPN:</strong> 17224493</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Get Your Free Quote</h2>
+
+<form action="https://formsubmit.co/TJusticeWealth@gmail.com" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="text" name="Name" placeholder="Full Name" required>
+<input type="email" name="Email" placeholder="Email" required>
+<input type="tel" name="Phone" placeholder="Phone Number" required>
+
+<select name="Interest">
+<option>Coverage Interest</option>
+<option>Term Life</option>
+<option>Whole Life</option>
+<option>IUL</option>
+<option>Mortgage Protection</option>
+<option>Annuities</option>
+<option>Final Expense</option>
+<option>Guaranteed Issue</option>
+</select>
+
+<textarea name="Message" placeholder="How can I help?"></textarea>
+
+<button type="submit">Get My Free Consultation</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Happy Life Financial</p>
+<p>TJusticeWealth@gmail.com</p>
+<p>NPN: 17224493</p>
+
+</footer>
+
+<script>
+
+let testimonials = [
+"Tristian made the entire process simple and stress-free. I finally feel protected knowing my family is covered. — Sarah M.",
+"Happy Life Financial helped me find the perfect policy for my needs. Professional and knowledgeable from start to finish. — James R.",
+"I was nervous about getting coverage, but Tristian walked me through everything step-by-step. Highly recommend! — Lisa T.",
+"Happy Life Financial truly cares about their clients and made everything easy to understand. — David K.",
+"Working with Tristian was one of the best decisions I’ve made for my family’s future. — Angela P."
+];
+
+let i = 0;
+
+setInterval(() => {
+document.getElementById("testimonial").innerHTML = testimonials[i];
+i = (i + 1) % testimonials.length;
+}, 4000);
+
+</script>
+
+</body>
+</html>
